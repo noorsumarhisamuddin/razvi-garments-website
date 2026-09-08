@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razvi Garments | Style for Everyone</title>
+<style>
+:root{--ink:#1c1813;--cream:#f5efe5;--gold:#a8752e;--line:rgba(28,24,19,.13)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+img{width:100%;display:block;object-fit:cover}a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:10;background:rgba(245,239,229,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Georgia,serif;font-size:1.25rem;letter-spacing:.18em}.brand small{display:block;font:9px Arial;letter-spacing:.25em;margin-top:2px}
+.links{display:flex;gap:22px;font-size:.9rem}.links a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:1px solid var(--line);padding:8px 11px;border-radius:8px}
+section{padding:70px 0}
+.hero{padding:30px 0}.heroBox{height:620px;border-radius:28px;overflow:hidden;position:relative;display:flex;align-items:end;background:#cfc1ad}
+.heroBox>img{position:absolute;inset:0;height:100%}.heroBox:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,13,9,.75),rgba(18,13,9,.35),transparent)}
+.heroText{position:relative;z-index:1;color:#fff;padding:clamp(25px,6vw,70px);max-width:680px}
+.kicker{text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;color:var(--gold);margin-bottom:10px}.heroText .kicker{color:#e5c796}
+h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.02}h1{font-size:clamp(3rem,7vw,6.5rem)}h2{font-size:clamp(2.1rem,4vw,4rem)}
+.heroText p{margin-top:18px;font-size:1.05rem}.btn{display:inline-block;margin-top:25px;padding:13px 22px;border-radius:999px;background:#c79349;color:#20160a;font-weight:bold}
+.head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}.copy{max-width:540px;color:#675d52}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{height:440px;border-radius:22px;overflow:hidden;position:relative;background:#d4c6b5}.card img{height:100%}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.75))}
+.cardText{position:absolute;z-index:1;bottom:0;color:#fff;padding:23px}.cardText h3{font-size:1.5rem}
+.feature{background:rgba(255,255,255,.38);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.featureGrid,.about{display:grid;grid-template-columns:1fr 1fr;gap:26px}.featureImage,.aboutImage{height:500px;border-radius:24px;overflow:hidden}.featureImage img,.aboutImage img{height:100%}
+.dark{border-radius:24px;background:#211a14;color:#fff;padding:clamp(28px,5vw,60px);display:flex;flex-direction:column;justify-content:center}.dark p{color:#d7cdc0;margin:18px 0}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fffdf9;border:1px solid var(--line);border-radius:18px;overflow:hidden}.product img{aspect-ratio:4/5}.product div{padding:15px}.product span{font-size:.72rem;color:var(--gold);text-transform:uppercase}
+.aboutText p{color:#655b50;margin-top:18px;font-size:1.05rem}.points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.point{background:#fffdf9;border:1px solid var(--line);border-radius:14px;padding:16px}
+.contact{background:#211a14;color:#fff;border-radius:28px;padding:clamp(28px,6vw,70px);display:grid;grid-template-columns:1.2fr .8fr;gap:35px}.contact p{color:#d7cdc0;margin:18px 0}.contactBox{border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px;margin-bottom:12px;color:#e7ded4}
+footer{padding:28px 0;color:#71665b}.foot{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){.links{display:none}.links.open{display:flex;position:absolute;top:64px;left:4%;right:4%;flex-direction:column;background:#fffdf9;padding:18px;border-radius:15px}.menu{display:block}.grid3{grid-template-columns:1fr 1fr}.featureGrid,.about,.contact{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){section{padding:50px 0}.heroBox{height:530px;border-radius:20px}.grid3{grid-template-columns:1fr}.card{height:390px}.head{display:block}.copy{margin-top:14px}.featureImage,.aboutImage{height:380px}.points{grid-template-columns:1fr}.btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="container navin">
+<a class="brand" href="#home">RAZVI<small>GARMENTS</small></a>
+<nav class="links" id="links"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#new">New Arrivals</a><a href="#about">About</a><a href="#contact">Visit Us</a></nav>
+<button class="menu" id="menu">☰</button>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="container"><div class="heroBox">
+<img src="Razvi front image.jpg" alt="Razvi Garments collection">
+<div class="heroText"><div class="kicker">Everyday Comfort • Occasion Style</div><h1>Style For Every Day.</h1><p>Discover comfortable daily wear, stylish party wear and quality kids collections selected for comfort, confidence and value.</p><a class="btn" href="#collections">Explore Collection</a></div>
+</div></div></section>
+
+<section id="collections"><div class="container">
+<div class="head"><div><div class="kicker">Our Collections</div><h2>Find Your Perfect Look</h2></div><p class="copy">From comfortable everyday essentials to standout occasion wear, explore collections for different moments and styles.</p></div>
+<div class="grid3">
+<a class="card" href="#daily"><img src="mens daily wear.png" alt="Men's daily wear"><div class="cardText"><h3>Men's Daily Wear</h3><p>Comfortable essentials for everyday style →</p></div></a>
+<a class="card" href="#party"><img src="party wear t shirt.png" alt="Party wear"><div class="cardText"><h3>Party Wear</h3><p>More style for special occasions →</p></div></a>
+<a class="card" href="#kids"><img src="kids cord sets.png" alt="Kids wear"><div class="cardText"><h3>Kids Wear</h3><p>Comfortable and stylish co-ord sets →</p></div></a>
+</div></div></section>
+
+<section class="feature" id="new"><div class="container"><div class="featureGrid">
+<div class="featureImage"><img src="new arrivals.png" alt="New arrivals"></div>
+<div class="dark"><div class="kicker">Fresh Selection</div><h2>New Arrivals, New Energy.</h2><p>Explore recently added styles and fresh pieces selected to keep your wardrobe updated.</p><a class="btn" href="#contact">Explore In Store</a></div>
+</div></div></section>
+
+<section id="daily"><div class="container">
+<div class="head"><div><div class="kicker">Men's Collection</div><h2>Daily Wear Essentials</h2></div><p class="copy">Easy-to-wear pieces made for regular use, comfort and effortless styling.</p></div>
+<div class="products">
+<div class="product"><img src="mens daily wear.png"><div><span>Comfort Collection</span><h3>Everyday T-Shirts</h3></div></div>
+<div class="product"><img src="mens daily wear.png"><div><span>Comfort Collection</span><h3>Daily Wear Lowers</h3></div></div>
+<div class="product"><img src="Big Size.png"><div><span>Inclusive Sizing</span><h3>Big Size Collection</h3></div></div>
+<div class="product"><img src="underwear image.jpg"><div><span>Essentials</span><h3>Innerwear Selection</h3></div></div>
+</div></div></section>
+
+<section id="party"><div class="container"><div class="featureGrid">
+<div class="dark"><div class="kicker">Occasion Ready</div><h2>Dress Better For The Moment.</h2><p>Discover party-wear T-shirts and lowers with a sharper, more stylish feel for outings and special occasions.</p><a class="btn" href="#contact">See The Collection</a></div>
+<div class="featureImage"><img src="party wear t shirt.png" alt="Party wear T-shirt"></div>
+</div></div></section>
+
+<section id="kids"><div class="container">
+<div class="head"><div><div class="kicker">Kids Collection</div><h2>Comfort Meets Fun</h2></div><p class="copy">Co-ord sets selected for active days, outings and comfortable everyday dressing.</p></div>
+<div class="grid3">
+<div class="card"><img src="kids cord sets.png"><div class="cardText"><h3>Daily Co-Ords</h3><p>Comfort for everyday movement</p></div></div>
+<div class="card"><img src="new arrivals.png"><div class="cardText"><h3>Fresh Styles</h3><p>New looks for young wardrobes</p></div></div>
+<div class="card"><img src="Razvi interior image.jpg"><div class="cardText"><h3>More To Explore</h3><p>Visit the store for the full selection</p></div></div>
+</div></div></section>
+
+<section id="about"><div class="container"><div class="about">
+<div class="aboutImage"><img src="Razvi interior image.jpg" alt="Inside Razvi Garments"></div>
+<div class="aboutText"><div class="kicker">Razvi Garments</div><h2>Clothing Selected For Real Everyday Life.</h2><p>Our focus is simple: useful, comfortable and stylish clothing options for men and kids, whether shopping for everyday wear or a special outing.</p>
+<div class="points"><div class="point"><strong>Comfort First</strong><br>Wearable styles for everyday use.</div><div class="point"><strong>Different Needs</strong><br>Daily wear, party wear, kids and more.</div><div class="point"><strong>Fresh Selection</strong><br>Regularly updated collection.</div><div class="point"><strong>In-Store Experience</strong><br>Explore more options directly at the store.</div></div>
+</div></div></div></section>
+
+<section id="contact"><div class="container"><div class="contact">
+<div><div class="kicker">Visit Razvi Garments</div><h2>See The Full Collection In Person.</h2><p>Visit our store to explore the latest selection and find the right style and fit for you.</p><a class="btn" target="_blank" href="https://www.instagram.com/razvi_garments_indore/">Follow On Instagram</a></div>
+<div><div class="contactBox"><strong>Collections</strong><br>Men's Daily Wear • Party Wear • Kids Wear • Big Sizes • Innerwear</div><div class="contactBox"><strong>Instagram</strong><br>@razvi_garments_indore</div><div class="contactBox"><strong>Store Visit</strong><br>Visit us to explore the complete and latest collection.</div></div>
+</div></div></section>
+</main>
+
+<footer><div class="container foot"><span>© 2026 Razvi Garments. All rights reserved.</span><span>Style • Comfort • Everyday Value</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.onclick=()=>links.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+</script>
+</body>
+</html>
+ont-weight:700; color:var(--rust); letter-spacing:0.03em; }
+  .arrival-info h4{ font-size:1.02rem; margin-top:6px; font-family:'Inter'; font-weight:600; }
+
+  /* ---------- Shop experience gallery ---------- */
+  .gallery-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .gallery-grid .ph{ aspect-ratio:1/1; }
+  .gallery-grid .g1{ grid-column:1/-1; aspect-ratio:16/9; }
+  @media(min-width:768px){
+    .gallery-grid{ grid-template-columns:repeat(4,1fr); }
+    .gallery-grid .g1{ grid-column:span 2; aspect-ratio:1/1; }
+  }
+  .gallery-grid .ph{ height:auto; }
+
+  /* ---------- About ---------- */
+  .about-wrap{ display:grid; grid-template-columns:1fr; gap:36px; align-items:center; }
+  @media(min-width:860px){ .about-wrap{ grid-template-columns:1fr 1fr; gap:56px; } }
+  .about-copy p{ font-size:1.03rem; color:rgba(247,242,231,0.78); margin-bottom:22px; }
+  .about-tagline{
+    font-family:'Syne', sans-serif; font-weight:700; font-size:1.5rem; color:var(--rust-soft);
+    letter-spacing:0.01em;
+  }
+  .about-media .ph{ aspect-ratio:4/5; }
+
+  /* ---------- Location ---------- */
+  .loc-grid{ display:grid; grid-template-columns:1fr; gap:34px; }
+  @media(min-width:900px){ .loc-grid{ grid-template-columns:1.05fr 0.95fr; gap:50px; } }
+  .loc-card{
+    background:var(--cream-2); border:1px solid var(--line-light);
+    border-radius:var(--radius-lg); padding:28px 26px;
+  }
+  .loc-card h3{ font-size:1.1rem; margin-bottom:10px; }
+  .loc-address{ font-size:1rem; color:#3a352e; margin-bottom:22px; line-height:1.6; }
+  .hours-table{ width:100%; border-collapse:collapse; margin-top:6px; }
+  .hours-table td{ padding:10px 0; border-top:1px solid var(--line-light); font-size:0.94rem; }
+  .hours-table td:first-child{ font-weight:600; color:var(--ink); }
+  .hours-table td:last-child{ text-align:right; color:#4a443c; }
+  .loc-map-ph{ aspect-ratio:4/3; }
+  @media(min-width:900px){ .loc-map-ph{ aspect-ratio:auto; height:100%; min-height:340px; } }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+  @media(min-width:768px){ .contact-grid{ grid-template-columns:repeat(3,1fr); } }
+  .contact-card{
+    background:var(--charcoal-2); border-radius:var(--radius-lg);
+    padding:28px 24px; display:flex; flex-direction:column; gap:14px;
+  }
+  .contact-card .icon{ width:34px; height:34px; color:var(--rust-soft); }
+  .contact-card h3{ color:var(--cream); font-size:1.1rem; }
+  .contact-card p{ color:rgba(247,242,231,0.68); font-size:0.9rem; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--ink); color:rgba(247,242,231,0.7); padding:50px 0 100px; }
+  @media(min-width:920px){ footer{ padding:50px 0 60px; } }
+  .footer-top{ display:grid; grid-template-columns:1fr; gap:34px; padding-bottom:36px; border-bottom:1px solid var(--line-dark); }
+  @media(min-width:768px){ .footer-top{ grid-template-columns:1.3fr 1fr 1.2fr; gap:40px; } }
+  .footer-brand{ font-family:'Syne'; font-weight:800; font-size:1.3rem; color:var(--cream); margin-bottom:10px; }
+  .footer-tagline{ color:var(--rust-soft); font-weight:600; font-size:0.92rem; }
+  .footer-col h4{ font-family:'Inter'; font-weight:700; color:var(--cream); font-size:0.88rem; letter-spacing:0.02em; margin-bottom:14px; }
+  .footer-col ul{ display:flex; flex-direction:column; gap:10px; }
+  .footer-col a{ font-size:0.9rem; color:rgba(247,242,231,0.68); }
+  .footer-col a:hover{ color:var(--cream); }
+  .footer-bottom{ padding-top:24px; font-size:0.82rem; color:rgba(247,242,231,0.45); display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; }
+
+  /* ---------- Floating mobile action bar ---------- */
+  .float-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:150;
+    background:rgba(20,18,16,0.97);
+    backdrop-filter:blur(8px);
+    border-top:1px solid var(--line-dark);
+    display:flex;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    gap:8px;
+  }
+  @media(min-width:920px){ .float-bar{ display:none; } }
+  .float-btn{
+    flex:1; display:flex; flex-direction:column; align-items:center; gap:4px;
+    color:rgba(247,242,231,0.85); font-size:0.68rem; font-weight:600;
+    padding:6px 0; border-radius:var(--radius);
+  }
+  .float-btn svg{ width:20px; height:20px; }
+  .float-btn.primary{ color:var(--rust-soft); }
+
+  /* Utility */
+  .section-body-pad{ padding-bottom:calc(60px + 68px); }
+  @media(min-width:920px){ .section-body-pad{ padding-bottom:60px; } }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">RAZVI <span>GARMENTS</span></a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#mens-wear">Men's Wear</a>
+      <a href="#kids-wear">Kids' Wear</a>
+      <a href="#big-sizes">Big Sizes</a>
+      <a href="#undergarments">Undergarments</a>
+      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#about">About</a>
+      <a href="#visit">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#visit" class="btn btn-outline-dark nav-cta">Visit Our Store</a>
+    <button class="menu-btn" id="openDrawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" width="26" height="26"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-top">
+    <button class="drawer-close" id="closeDrawer" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#home" class="drawer-link">Home</a>
+    <a href="#mens-wear" class="drawer-link">Men's Wear</a>
+    <a href="#kids-wear" class="drawer-link">Kids' Wear</a>
+    <a href="#big-sizes" class="drawer-link">Big Sizes</a>
+    <a href="#undergarments" class="drawer-link">Undergarments</a>
+    <a href="#new-arrivals" class="drawer-link">New Arrivals</a>
+    <a href="#about" class="drawer-link">About Razvi Garments</a>
+    <a href="#visit" class="drawer-link">Visit Our Store</a>
+    <a href="#contact" class="drawer-link">Contact</a>
+  </nav>
+  <div class="drawer-foot">
+    <a href="tel:+919770167376" class="btn btn-primary btn-block">Call Now</a>
+    <a href="https://wa.me/919770167376" target="_blank" rel="noopener" class="btn btn-outline-dark btn-block">Chat on WhatsApp</a>
+  </div>
+</aside>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Indore's Trusted Clothing Store</div>
+      <h1>Comfort for Every Day. Style for Every Occasion.</h1>
+      <p>Men's &amp; Kids' Daily Wear, Big Sizes and Men's Undergarments — selected with a focus on comfort, quality and value.</p>
+      <div class="hero-btns">
+        <a href="#categories" class="btn btn-primary">Explore Collection</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-outline-dark">Visit Our Store</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="ph">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="ph-tag">REAL PHOTO REQUIRED</div>
+        <div class="ph-label">[REAL RAZVI GARMENTS SHOP PHOTO TO BE ADDED HERE]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST SECTION ===================== -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-head">
+      <div class="eyebrow-label">Our Promise</div>
+      <h2>We Don't Just Sell Clothes. We Sell Trust, Quality &amp; Comfort.</h2>
+      <p>At Razvi Garments, we believe clothing should feel as good as it looks. Our collection is selected for everyday comfort, reliable quality and styles that suit real life.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.6-3 8.4-7 9.5-4-1.1-7-4.9-7-9.5V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Trust</h3>
+        <p>A trusted local clothing store focused on customer satisfaction.</p>
+      </div>
+      <div class="trust-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 5.9 6.4.6-4.8 4.3 1.5 6.3L12 15.9 6.3 19.1l1.5-6.3-4.8-4.3 6.4-.6L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <h3>Quality</h3>
+        <p>Carefully selected clothing with attention to fabric and everyday usability.</p>
+      </div>
+      <div class="trust-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 13c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4 13v5a2 2 0 002 2h1v-7H6a2 2 0 00-2 2z" stroke="currentColor" stroke-width="1.5"/><path d="M20 13v5a2 2 0 01-2 2h-1v-7h1a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+        <h3>Comfort</h3>
+        <p>Clothing designed for comfortable daily wear and confident outings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SHOP BY CATEGORY ===================== -->
+<section class="section dark" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-label">Shop By Category</div>
+      <h2>Everything We Offer, in One Place</h2>
+      <p>Four dedicated categories, each chosen for everyday comfort and lasting quality.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL MEN'S LOWER / T-SHIRT PRODUCT PHOTO]</div>
+        </div>
+        <div class="cat-body">
+          <h3>Men's Wear</h3>
+          <p>Lowers and T-shirts for daily wear, comfortable everyday use and stylish occasions.</p>
+          <a href="#mens-wear" class="btn btn-outline-dark btn-block">Explore Men's Wear</a>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL KIDS' CORD SET PRODUCT PHOTO]</div>
+        </div>
+        <div class="cat-body">
+          <h3>Kids' Wear</h3>
+          <p>Cord sets, lowers and T-shirts for daily wear, outings and comfortable everyday clothing.</p>
+          <a href="#kids-wear" class="btn btn-outline-dark btn-block">Explore Kids' Wear</a>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL BIG SIZE PRODUCT PHOTO]</div>
+        </div>
+        <div class="cat-body">
+          <h3>Big Sizes</h3>
+          <p>Comfortable clothing options for customers looking for larger sizes.</p>
+          <a href="#big-sizes" class="btn btn-outline-dark btn-block">Explore Big Sizes</a>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL MEN'S UNDERGARMENT PRODUCT PHOTO]</div>
+        </div>
+        <div class="cat-body">
+          <h3>Men's Undergarments</h3>
+          <p>A clean, discreet and professional selection of everyday essentials.</p>
+          <a href="#undergarments" class="btn btn-outline-dark btn-block">Explore Undergarments</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MEN'S WEAR ===================== -->
+<section class="section" id="mens-wear">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-media">
+        <div class="ph-row">
+          <div class="ph light">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div class="ph-tag">PRODUCT PHOTO</div>
+            <div class="ph-label">[REAL MEN'S LOWER / T-SHIRT PRODUCT PHOTO — DAILY WEAR]</div>
+          </div>
+          <div class="ph light">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div class="ph-tag">PRODUCT PHOTO</div>
+            <div class="ph-label">[REAL MEN'S LOWER / T-SHIRT PRODUCT PHOTO — PARTY WEAR]</div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-copy">
+        <div class="eyebrow-label">Category</div>
+        <h2>Men's Wear</h2>
+        <p style="margin-top:14px; color:#4a443c;">Comfortable daily wear and stylish options for every occasion.</p>
+        <div class="subcat">
+          <div class="subcat-item">
+            <h4>Daily Wear</h4>
+            <p>Men's lowers and T-shirts designed for everyday comfort.</p>
+          </div>
+          <div class="subcat-item">
+            <h4>Party / Occasion Wear</h4>
+            <p>Stylish men's lowers and T-shirts suitable for outings and occasions.</p>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:26px;">Visit Razvi Garments to Explore the Collection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KIDS' WEAR ===================== -->
+<section class="section mid" id="kids-wear">
+  <div class="wrap">
+    <div class="feature reverse">
+      <div class="feature-copy">
+        <div class="eyebrow-label">Category</div>
+        <h2>Comfortable Styles for Little Everyday Adventures</h2>
+        <div class="subcat">
+          <div class="subcat-item">
+            <h4>Kids' Cord Sets</h4>
+            <p>For daily wear, outings and comfortable, stylish looks.</p>
+          </div>
+          <div class="subcat-item">
+            <h4>Kids' Lowers &amp; T-Shirts</h4>
+            <p>For comfortable daily wear and active everyday use.</p>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:26px;">Visit Razvi Garments to Explore the Collection</a>
+      </div>
+      <div class="feature-media">
+        <div class="ph-row">
+          <div class="ph light">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div class="ph-tag">PRODUCT PHOTO</div>
+            <div class="ph-label">[REAL KIDS' CORD SET PRODUCT PHOTO]</div>
+          </div>
+          <div class="ph light">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div class="ph-tag">PRODUCT PHOTO</div>
+            <div class="ph-label">[REAL KIDS' DAILY WEAR PHOTO]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BIG SIZES ===================== -->
+<section class="section" id="big-sizes">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-media">
+        <div class="ph light" style="aspect-ratio:4/3;">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL BIG SIZE PRODUCT PHOTO]</div>
+        </div>
+      </div>
+      <div class="feature-copy">
+        <div class="eyebrow-label">Category</div>
+        <h2>Comfort That Fits You Better</h2>
+        <p style="margin-top:14px; color:#4a443c;">Explore comfortable clothing options available in bigger sizes at Razvi Garments.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:26px;">Visit Razvi Garments to Explore the Collection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UNDERGARMENTS ===================== -->
+<section class="section mid" id="undergarments">
+  <div class="wrap">
+    <div class="feature reverse">
+      <div class="feature-copy">
+        <div class="eyebrow-label">Category</div>
+        <h2>Everyday Comfort Starts With the Right Basics</h2>
+        <p style="margin-top:14px; color:#4a443c;">Explore men's undergarment options selected for everyday comfort and quality.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:26px;">Visit Razvi Garments to Explore the Collection</a>
+      </div>
+      <div class="feature-media">
+        <div class="ph light" style="aspect-ratio:4/3;">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">PRODUCT PHOTO</div>
+          <div class="ph-label">[REAL MEN'S UNDERGARMENT PRODUCT PHOTO]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEW ARRIVALS ===================== -->
+<section class="section dark" id="new-arrivals">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-label">Just In</div>
+      <h2>New Arrivals</h2>
+      <p>Fresh additions to the collection. Swipe to see what's new.</p>
+    </div>
+    <div class="arrivals-scroll">
+      <div class="arrival-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">NEW ARRIVAL PHOTO</div>
+          <div class="ph-label">[REAL PRODUCT PHOTO TO BE ADDED]</div>
+        </div>
+        <div class="arrival-info">
+          <div class="cat-tag">MEN'S WEAR</div>
+          <h4>New in-store this week</h4>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">NEW ARRIVAL PHOTO</div>
+          <div class="ph-label">[REAL PRODUCT PHOTO TO BE ADDED]</div>
+        </div>
+        <div class="arrival-info">
+          <div class="cat-tag">KIDS' WEAR</div>
+          <h4>New in-store this week</h4>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">NEW ARRIVAL PHOTO</div>
+          <div class="ph-label">[REAL PRODUCT PHOTO TO BE ADDED]</div>
+        </div>
+        <div class="arrival-info">
+          <div class="cat-tag">BIG SIZES</div>
+          <h4>New in-store this week</h4>
+        </div>
+      </div>
+      <div class="arrival-card">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 15l5-4 4 3 3-2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">NEW ARRIVAL PHOTO</div>
+          <div class="ph-label">[REAL PRODUCT PHOTO TO BE ADDED]</div>
+        </div>
+        <div class="arrival-info">
+          <div class="cat-tag">UNDERGARMENTS</div>
+          <h4>New in-store this week</h4>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/razvi_garments_indore" target="_blank" rel="noopener" class="btn btn-outline-dark" style="margin-top:30px;">Visit Store for Latest Arrivals</a>
+  </div>
+</section>
+
+<!-- ===================== SHOP EXPERIENCE ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-label">The Store</div>
+      <h2>Visit Razvi Garments</h2>
+      <p>A real store, in the heart of Old Palasia, Indore. These spaces are reserved for real photographs of our shop.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="ph light g1">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="ph-tag">SHOP PHOTO</div>
+        <div class="ph-label">[REAL EXTERIOR SHOP PHOTO]</div>
+      </div>
+      <div class="ph light">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="ph-tag">SHOP PHOTO</div>
+        <div class="ph-label">[REAL SHOP INTERIOR PHOTO]</div>
+      </div>
+      <div class="ph light">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="ph-tag">SHOP PHOTO</div>
+        <div class="ph-label">[REAL CLOTHING DISPLAY PHOTO]</div>
+      </div>
+      <div class="ph light">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="ph-tag">SHOP PHOTO</div>
+        <div class="ph-label">[REAL PRODUCT RACK PHOTO]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section dark" id="about">
+  <div class="wrap">
+    <div class="about-wrap">
+      <div class="about-copy">
+        <div class="eyebrow-label">About Us</div>
+        <h2 style="color:var(--cream); font-size:1.85rem; margin:10px 0 20px;">About Razvi Garments</h2>
+        <p>Razvi Garments is a clothing store in Indore focused on comfortable, quality clothing for men and kids. From everyday lowers and T-shirts to kids' cord sets, big sizes and men's undergarments, our goal is simple — to provide clothing that customers can trust for comfort and quality.</p>
+        <div class="about-tagline">Trust. Quality. Comfort.</div>
+      </div>
+      <div class="about-media">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="ph-tag">SHOP PHOTO</div>
+          <div class="ph-label">[REAL SHOP INTERIOR PHOTO]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISIT / LOCATION ===================== -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-label">Find Us</div>
+      <h2>Visit Our Store</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <h3>Address</h3>
+        <p class="loc-address">Shop No. 4, Anand Bazar Road, Bima Nagar,<br>Old Palasia, Indore, Madhya Pradesh 452018, India</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="margin-bottom:30px;">Get Directions</a>
+
+        <h3>Store Hours</h3>
+        <table class="hours-table">
+          <tr><td>Sunday</td><td>3:00 PM – 11:00 PM</td></tr>
+          <tr><td>Monday</td><td>11:30 AM – 11:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>11:30 AM – 11:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>11:30 AM – 11:00 PM</td></tr>
+          <tr><td>Thursday</td><td>11:30 AM – 11:00 PM</td></tr>
+          <tr><td>Friday</td><td>11:30 AM – 1:00 PM,<br>2:00 PM – 11:00 PM</td></tr>
+          <tr><td>Saturday</td><td>11:30 AM – 11:00 PM</td></tr>
+        </table>
+      </div>
+      <div class="ph light loc-map-ph">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 105 9.5C5 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+        <div class="ph-tag">MAP</div>
+        <div class="ph-label">Tap "Get Directions" to open the exact Razvi Garments location on Google Maps.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section dark section-body-pad" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow-label">Get In Touch</div>
+      <h2>Contact Razvi Garments</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 5c0-1 1-1.5 1.5-1.5H8l1.5 4L8 9c1 2.5 3.5 5 6 6l1.5-1.5 4 1.5v2.5c0 .5-.5 1.5-1.5 1.5C11.5 19 5 12.5 5 6.5 5 6.5 4 6 4 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <h3>Call Us</h3>
+        <p>9770167376</p>
+        <a href="tel:+919770167376" class="btn btn-primary btn-block">Call Now</a>
+      </div>
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 3.5 2.5 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <h3>WhatsApp</h3>
+        <p>9770167376</p>
+        <a href="https://wa.me/919770167376" target="_blank" rel="noopener" class="btn btn-primary btn-block">Chat on WhatsApp</a>
+      </div>
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+        <h3>Instagram</h3>
+        <p>@razvi_garments_indore — see new arrivals, latest collections and store updates.</p>
+        <a href="https://www.instagram.com/razvi_garments_indore" target="_blank" rel="noopener" class="btn btn-primary btn-block">Follow Us on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">RAZVI GARMENTS</div>
+        <div class="footer-tagline">Trust. Quality. Comfort.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#mens-wear">Men's Wear</a></li>
+          <li><a href="#kids-wear">Kids' Wear</a></li>
+          <li><a href="#big-sizes">Big Sizes</a></li>
+          <li><a href="#undergarments">Undergarments</a></li>
+          <li><a href="#new-arrivals">New Arrivals</a></li>
+          <li><a href="#about">About Razvi Garments</a></li>
+          <li><a href="#visit">Visit Our Store</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919770167376">Phone / WhatsApp: 9770167376</a></li>
+          <li><a href="https://www.instagram.com/razvi_garments_indore" target="_blank" rel="noopener">Instagram: @razvi_garments_indore</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener">Shop No. 4, Anand Bazar Road, Bima Nagar, Old Palasia, Indore, MP 452018</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Razvi Garments. All rights reserved.</span>
+      <span>Indore, Madhya Pradesh</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING MOBILE ACTION BAR ===================== -->
+<div class="float-bar">
+  <a href="https://wa.me/919770167376" target="_blank" rel="noopener" class="float-btn">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    WhatsApp
+  </a>
+  <a href="tel:+919770167376" class="float-btn primary">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0-1 1-1.5 1.5-1.5H8l1.5 4L8 9c1 2.5 3.5 5 6 6l1.5-1.5 4 1.5v2.5c0 .5-.5 1.5-1.5 1.5C11.5 19 5 12.5 5 6.5 5 6.5 4 6 4 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    Call
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Razvi+Garments%2C+Shop+No.+4%2C+Anand+Bazar+Road%2C+Bima+Nagar%2C+Old+Palasia%2C+Indore%2C+Madhya+Pradesh+452018" target="_blank" rel="noopener" class="float-btn">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 105 9.5C5 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+    Location
+  </a>
+</div>
+
+<script>
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('drawerBackdrop');
+  const openBtn = document.getElementById('openDrawer');
+  const closeBtn = document.getElementById('closeDrawer');
+
+  function openDrawer(){ drawer.classList.add('open'); backdrop.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ drawer.classList.remove('open'); backdrop.classList.remove('open'); document.body.style.overflow=''; }
+
+  openBtn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(a => a.addEventListener('click', closeDrawer));
+</script>
+
+</body>
+</html>
